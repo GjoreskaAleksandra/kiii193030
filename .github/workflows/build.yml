@@ -17,7 +17,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - run: npm install
-      - run: npm start
       - run: docker build -t aleksandragjoreska/taskmanagement
       - run: docker push aleksandragjoreska/taskmanagement
